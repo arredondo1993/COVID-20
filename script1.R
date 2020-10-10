@@ -10,3 +10,7 @@ d_global$X10.8.20[d_global$Country.Region== "Chile"]
 
 d_global2 <- melt(d_global, id=c("Province.State","Country.Region","Lat","Long"), measure.vars = names(d_global)[5:265], value.name = "Deaths") 
 d_global2 <- d_global2[order(d_global2$Country.Region),]
+
+### algunos graficos
+plot(d_global2$variable, d_global2$Deaths)
+
